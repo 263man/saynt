@@ -3403,165 +3403,163 @@ input, select, textarea {
 
 /* Header */
 
-	#page-wrapper {
-		padding-top: 3.5em;
-	}
+#page-wrapper {
+	padding-top: 3.5em;
+}
 
-	#header {
-		background: rgba(39, 40, 51, 0.965);
-		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
-		cursor: default;
-		height: 3.5em;
-		left: 0;
-		line-height: 3.5em;
-		position: fixed;
+#header {
+	background: rgba(39, 40, 51, 0.965);
+	box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+	cursor: default;
+	height: 3.5em;
+	left: 0;
+	line-height: 3.5em;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+	#header h1 {
+		height: inherit;
+		left: 1.25em;
+		line-height: inherit;
+		margin: 0;
+		position: absolute;
 		top: 0;
-		width: 100%;
-		z-index: 100;
 	}
 
-		#header h1 {
-			height: inherit;
-			left: 1.25em;
-			line-height: inherit;
+	#header nav {
+		position: absolute;
+		right: 1em;
+		top: 0;
+	}
+
+		#header nav ul {
 			margin: 0;
-			position: absolute;
-			top: 0;
 		}
 
-		#header nav {
-			position: absolute;
-			right: 1em;
-			top: 0;
-		}
-
-			#header nav ul {
-				margin: 0;
+			#header nav ul li {
+				display: inline-block;
+				margin-left: 1em;
 			}
 
-				#header nav ul li {
+				#header nav ul li a, #header nav ul li span {
+					border: 0;
+					color: inherit;
 					display: inline-block;
-					margin-left: 1em;
+					height: inherit;
+					line-height: inherit;
+					outline: 0;
 				}
 
-					#header nav ul li a, #header nav ul li span {
-						border: 0;
-						color: inherit;
-						display: inline-block;
-						height: inherit;
-						line-height: inherit;
-						outline: 0;
+					#header nav ul li a.button, #header nav ul li span.button {
+						height: 2em;
+						line-height: 2em;
+						padding: 0 1.25em;
 					}
 
-						#header nav ul li a.button, #header nav ul li span.button {
-							height: 2em;
-							line-height: 2em;
-							padding: 0 1.25em;
-						}
-
-						#header nav ul li a:not(.button):before, #header nav ul li span:not(.button):before {
-							margin-right: 0.5em;
-						}
-
-					#header nav ul li.active > a, #header nav ul li.active > span {
-						color: #e44c65;
+					#header nav ul li a:not(.button):before, #header nav ul li span:not(.button):before {
+						margin-right: 0.5em;
 					}
 
-					#header nav ul li > ul {
-						display: none;
-					}
+				#header nav ul li.active > a, #header nav ul li.active > span {
+					color: #e44c65;
+				}
 
-	body.landing #page-wrapper {
-		padding-top: 0;
-	}
+				#header nav ul li > ul {
+					display: none;
+				}
 
-	body.landing #header {
-		background: transparent;
-		box-shadow: none;
-		position: absolute;
-	}
+body.landing #page-wrapper {
+	padding-top: 0;
+}
+
+body.landing #header {
+	background: transparent;
+	box-shadow: none;
+	position: absolute;
+}
 
 /* Banner */
 
-	#banner {
-		background-attachment: fixed;
-		background-color: #272833;
-		background-image: url("../../images/banner.jpg");
-		background-position: center center;
-		background-size: cover;
-		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
-		min-height: 100vh;
+#banner {
+	background-attachment: fixed;
+	background-color: #272833;
+	background-image: url("../../images/banner.jpg");
+	background-position: center center;
+	background-size: cover;
+	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+	min-height: 100vh;
+	position: relative;
+	text-align: center;
+	z-index: 21;
+}
+
+	#banner:before {
+		content: '';
+		display: inline-block;
+		height: 100vh;
+		vertical-align: middle;
+		width: 1%;
+	}
+
+	#banner:after {
+		background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+		background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.65)), url("images/overlay.png");;
+					content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	#banner .content {
+		display: inline-block;
+		margin-right: 1%;
+		max-width: 95%;
+		padding: 6em;
 		position: relative;
 		text-align: center;
-		z-index: 21;
+		vertical-align: middle;
+		z-index: 1;
 	}
 
-		#banner:before {
-			content: '';
-			display: inline-block;
-			height: 100vh;
-			vertical-align: middle;
-			width: 1%;
-		}
-
-		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			content: '';
+		#banner .content header {
 			display: block;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-
-		#banner .content {
-			display: inline-block;
-			margin-right: 1%;
-			max-width: 95%;
-			padding: 6em;
-			position: relative;
-			text-align: right;
 			vertical-align: middle;
-			z-index: 1;
 		}
 
-			#banner .content header {
-				display: inline-block;
-				vertical-align: middle;
+			#banner .content header h2 {
+				font-size: 2.5em;
+				margin: 0;
 			}
 
-				#banner .content header h2 {
-					font-size: 2.5em;
-					margin: 0;
-				}
+			#banner .content header p {
+				margin: 0.5em 0 0 0;
+				top: 0;
+			}
 
-				#banner .content header p {
-					margin: 0.5em 0 0 0;
-					top: 0;
-				}
+		#banner .content .image {
+			border-radius: 100%;
+			display:flexbox;
+			height: 18em;
+			
+			text-align: center;
+			width: 18em;
+		}
 
-			#banner .content .image {
+			#banner .content .image img {
 				border-radius: 100%;
-				display: inline-block;
-				height: 18em;
-				margin-left: 3em;
-				vertical-align: middle;
-				width: 18em;
+				display: block;
+				width: 100%;
 			}
 
-				#banner .content .image img {
-					border-radius: 100%;
-					display: block;
-					width: 100%;
-				}
-
-	body.is-touch #banner {
-		background-attachment: scroll;
-	}
+body.is-touch #banner {
+	background-attachment: scroll;
+}
 
 /* Footer */
 
