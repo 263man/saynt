@@ -3556,6 +3556,19 @@ body.is-touch #banner {
 	background-attachment: scroll;
 }
 
+.farai{
+	display:inline-flex;background-color: #39c088;
+}
+.farai2{
+	float: left;
+	
+}
+
+.farai2{
+	padding: 20px;
+	float: right;
+}
+
 /* Footer */
 
 	#footer {
@@ -3630,6 +3643,7 @@ body.is-touch #banner {
 				.content1 img{
 					width: 100%;
 					height: auto;
+					padding: 50px;
 				}
 
 				.content1 p{
